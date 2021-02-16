@@ -91,9 +91,18 @@ router.post(
   checkSignupDataType,
   signup
 );
+// when user request is post and path is /create-user,
+// check input is empty 
+// then check data type
+// then run sing up
+
 
 //login
 router.post("/login", checkLoginEmptyMiddleware, checkEmailFormat, login);
+// when user request is post and is path /login, 
+// check login section is empty then check email format, 
+// then run login
+
 
 //delete user by id
 router.delete("/delete-user-by-id/:id", deleteUserByID);
@@ -104,7 +113,7 @@ router.delete("/delete-user-by-email", deleteUserByEmail);
 //update user by id
 router.put("/update-user-by-id/:id", updateUserByID);
 
-//update user by email
+// update user by email
 // router.put("/update-user-by-email/:email", userController.updateUserByEmail);
 router.put("/update-user-by-email/", updateUserByEmail);
 
