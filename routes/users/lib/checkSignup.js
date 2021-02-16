@@ -1,5 +1,9 @@
 const { checkIsEmpty } = require("./authMethods");
 
+// check user inputs are empty. 
+// If empty, put error message in error object,
+// and return error object instead of running next
+
 const checkSignupInputIsEmpty = (req, res, next) => {
   let errorObj = {};
 

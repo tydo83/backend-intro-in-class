@@ -9,6 +9,12 @@ function checkIfHaveNumber(target) {
     return false;
   }
 }
+// checkIfHaveNumber is declared here, since it is not used anywhere except here 
+
+// check first name and last name have numbers and symbols
+// check email and password
+// If user inputs are not passed, put error message in error object,
+// and return error object instead of running next
 
 function checkSignupDataType(req, res, next) {
   let errorObj = {};

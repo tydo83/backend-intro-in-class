@@ -1,5 +1,9 @@
 const { checkIsEmpty, checkIsEmail } = require("./authMethods.js");
 
+// check user inputs are empty. 
+// If empty, put error message in error object,
+// and return error object instead of running next
+
 function checkLoginEmptyMiddleware(req, res, next) {
   let errorObj = {};
 

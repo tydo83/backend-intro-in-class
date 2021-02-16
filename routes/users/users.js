@@ -11,13 +11,19 @@ const {
   updateUserByID,
   updateUserByEmail,
 } = require("./controller/userController");
+// load and cache userController module from controller folder to run requests
+// since we destructing object, order doesn't matter here 
 
 const { checkSignupInputIsEmpty } = require("./lib/checkSignup");
+// load and cache checkSingupInputIsEmpty module from the library folder
 const { checkSignupDataType } = require("./lib/checkSignupDataType");
+// load and cache checkSingupDataType module from the library folder 
 const {
   checkLoginEmptyMiddleware,
   checkEmailFormat,
 } = require("./lib/checkLogin");
+// load and cache checkLoginEmptyMiddleware and checkEmailFormat from the library folder 
+
 /* GET users listing. */
 router.get("/", async function (req, res, next) {
   res.send("something");
